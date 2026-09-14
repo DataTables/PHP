@@ -387,7 +387,7 @@ class StateRestore extends Ext
 			return ['error' => 'Incomplete data - no name'];
 		}
 
-		if (!$this->_assert($data, 'state') || !json_validate($data['state'])) {
+		if (!$this->_assert($data, 'state') || json_decode($data['state']) === null) {
 			return ['error' => 'Incomplete data - no valid state'];
 		}
 
@@ -653,8 +653,6 @@ class StateRestore extends Ext
 	 * shown, despite only returning a single record.
 	 *
 	 * @param mixed $data Submitted data
-	 *
-	 * @return void
 	 */
 	private function _removeDefault($data)
 	{
