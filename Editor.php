@@ -72,7 +72,7 @@ class Editor extends Ext
 	/** Request type - upload */
 	public const ACTION_UPLOAD = 'upload';
 
-	public const VERSION = '3.0.2';
+	public const VERSION = '3.1.0';
 
 	/**
 	 * Determine the request type from an HTTP request.
